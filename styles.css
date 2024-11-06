@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+section {
+  padding: 20px;
+}
+
+footer p {
+  padding: 8px;
+}
+
+.carousel-wrapper {
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 8px;
+  padding: 16px;
+  list-style: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Hide scrollbar in webkit */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  width: 80%;
+  background-color: #f0f0f0;
+  height: 20vh;
+}
+
+.content-card {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+
+  width: 3rem;
+  height: 3rem;
+}
+
+.button--previous {
+  left: 1.5rem;
+
+  -moz-transform: scale(-1, -1);
+  -o-transform: scale(-1, -1);
+  -webkit-transform: scale(-1, -1);
+  transform: scale(-1, -1) translate(-50%, 50%);
+}
+
+.button--next {
+  right: 1.5rem;
+  transform: translate(-50%, -50%); /* Adjust to center */
+}
